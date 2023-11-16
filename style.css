@@ -1,0 +1,163 @@
+:root
+{
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+
+body
+{
+    margin: 0rem;
+    padding: 0rem;
+    font-size: 16px;
+    font-family: 'Red Hat Display', sans-serif;
+    background-color: var(--Pale-blue);
+}
+
+.attribution
+{
+    position: absolute;
+    top: 0%;
+}
+
+#background
+{
+    width: 100%;
+    height: 50lvh;
+    background: transparent;
+    background-image: url('assets/pattern-background-desktop.svg');
+    background-position: center;
+    background-size: contain;
+}
+
+#page
+{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    background: transparent;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#card
+{
+    width: 380px;
+    max-width: 85%;
+    padding-bottom: 0.4rem;
+    background-color: var(--Very-pale-blue);
+    border-radius: 20px;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns:
+        100%;
+    grid-template-rows:
+        33% 67%;
+    overflow: hidden;
+}
+
+#text
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center
+}
+
+h1
+{
+    color: var(--Dark-blue);
+    font-size: 1.6rem;
+    font-weight: 900;
+}
+
+#intro
+{
+    color: var(--Desaturated-blue);
+    font-size: .9rem;
+    width: 80%;
+    margin: 0rem;
+}
+
+#plan-card{
+    width: 80%;
+    height: 5rem;
+    margin: 1.1rem 0rem;
+    background-color: hsla(225, 100%, 94%, 0.39);
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    grid-template-columns:
+        30% 40% 30%;
+    grid-template-rows:
+        100%;
+}
+
+#plan-price
+{
+    color: var(--Desaturated-blue);
+    font-size: .9rem;
+    text-align: left;
+    line-height: 1.5rem;
+}
+
+span
+{
+    color: var(--Dark-blue);
+    font-weight: 900;
+}
+
+#change
+{
+    color: blue;
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+#button-1
+{
+    width: 80%;
+    height: 2.8rem;
+    background-color: rgb(5, 5, 214);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 20px 20px hsl(224, 35%, 85%);
+    color: white;
+    font-weight: 700;
+}
+
+#button-2
+{
+    width: 80%;
+    height: 2.8rem;
+    margin: .8rem 0rem;
+    background: transparent;
+    border: none;
+    color: var(--Desaturated-blue);
+    font-size: .8rem;
+    font-weight: 700;
+}
+
+@media  screen and (max-width: 375px)
+{
+    #background
+    {
+        background-image: url('assets/pattern-background-mobile.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #card
+    {
+        grid-template-rows:
+            29% 71%;
+    }
+}
